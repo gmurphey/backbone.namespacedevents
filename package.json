@@ -1,13 +1,21 @@
 {
   "name": "backbone.namespacedevents",
-  "version": "0.1.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "A Backbone extension that triggers namespaced events globally.",
   "main": "backbone.namespacedevents.js",
+  "author": "Garrett Murphey <gmurphey@gmurphey.com> (http://gmurphey.com)",
+  "license": "ISC",
+  "files": [
+    "backbone.namespacedevents.js",
+    "readme.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gmurphey/backbone.namespacedevents.git"
+  },
   "scripts": {
     "test": "grunt test"
   },
-  "author": "Garrett Murphey",
-  "license": "ISC",
   "devDependencies": {
     "grunt": "^0.4.4",
     "grunt-contrib-concat": "^0.4.0",
