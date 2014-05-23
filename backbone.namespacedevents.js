@@ -14,22 +14,22 @@
   }
 } (this, function (Backbone, _) {
   var NamespacedEventModules = {},
-      objs = ['Model', 'Collection', 'View'];
+      modules = ['Model', 'Collection', 'View'];
 
-  _.each(objs, function (obj) {
-    NamespacedEventModules[obj] = Backbone[obj].extend({
+  _.each(modules, function (module) {
+    NamespacedEventModules[module] = Backbone[module].extend({
       initialize: function (options) {
         var overridable_properties = ['eventNamespace'];
 
         _.extend(this, _.pick(options || {}, overridable_properties));
 
-        Backbone[obj].prototype.initialize.apply(this, arguments);
+        Backbone[module].prototype.initialize.apply(this, arguments);
       },
 
       trigger: function () {
         var args = arguments;
 
-        Backbone[obj].prototype.trigger(this, args);
+        Backbone[module].prototype.trigger(this, args);
 
         if (this.eventNamespace && args.length) {
           args[0] = [this.eventNamespace, args[0]].join(':');
