@@ -1,0 +1,29 @@
+{
+  "name": "backbone.namespacedevents",
+  "main": "backbone.namespacedevents.js",
+  "version": "0.0.1",
+  "authors": [
+    "Garrett Murphey <gmurphey@gmurphey.com>"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "underscore": "~1.6.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "should": "~3.3.1"
+  }
+}

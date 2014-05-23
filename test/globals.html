@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Backbone.CustomSync Test Suite</title>
+    <link rel="stylesheet" href="vendor/mocha/mocha.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script type="text/javascript" src="vendor/underscore/underscore.js"></script>
+    <script type="text/javascript" src="vendor/backbone/backbone.js"></script>
+    <script type="text/javascript" src="../backbone.namespacedevents.js"></script>
+    <script type="text/javascript" src="vendor/mocha/mocha.js"></script>
+    <script type="text/javascript" src="vendor/should/should.js"></script>
+    <script type="text/javascript">
+      mocha.setup("bdd");
+    </script>
+
+    <script type="text/javascript" src="tests/backbone.namespacedevents.js"></script>
+    <script type="text/javascript">
+      mocha.checkLeaks();
+      mocha.globals(["_", "Backbone"]);
+      mocha.run();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "backbone.namespacedevents",
+  "version": "0.1.0",
+  "description": "",
+  "main": "backbone.namespacedevents.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "author": "Garrett Murphey",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha": "^0.4.10",
+    "should": "^3.3.1",
+    "sinon": "^1.10.0"
+  },
+  "dependencies": {
+    "backbone": "^1.1.2",
+    "underscore": "^1.6.0"
+  }
+}

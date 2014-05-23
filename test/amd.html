@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Backbone.CustomSync Test Suite</title>
+    <link rel="stylesheet" href="vendor/mocha/mocha.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script type="text/javascript" src="vendor/mocha/mocha.js"></script>
+    <script type="text/javascript" src="vendor/should/should.js"></script>
+    <script type="text/javascript" src="vendor/requirejs/require.js"></script>
+    <script type="text/javascript">
+      mocha.setup("bdd");
+
+      require.config({
+        paths: {
+          "underscore": "vendor/underscore/underscore",
+          "backbone": "vendor/backbone/backbone",
+          "backbone.namespacedevents": "../backbone.namespacedevents"
+        }
+      });
+
+      require(["backbone.namespacedevents"], function () {
+        require(["tests/backbone.namespacedevents"], function () {
+          mocha.checkLeaks();
+          mocha.run();
+        });
+      });
+    </script>
+  </body>
+</html>
