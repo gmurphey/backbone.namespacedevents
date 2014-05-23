@@ -21,9 +21,7 @@
       initialize: function (options) {
         var overridable_properties = ['eventNamespace'];
 
-        if (options) {
-          _.extend(this, _.pick(options, overridable_properties));
-        }
+        _.extend(this, _.pick(options || {}, overridable_properties));
 
         Backbone[obj].prototype.initialize.apply(this, arguments);
       },
