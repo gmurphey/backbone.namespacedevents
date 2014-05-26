@@ -49,7 +49,7 @@ module.exports = function(grunt) {
         src: 'Gruntfile.js'
       },
       lib_test: {
-        src: ['<%= pkg.name %>.js', 'test/**/*.js']
+        src: ['<%= pkg.name %>.js', 'test/tests/*.js']
       }
     },
     mocha: {
@@ -85,6 +85,13 @@ module.exports = function(grunt) {
         files: '<%= jshint.lib_test.src %>',
         tasks: ['jshint:lib_test', 'nodeunit']
       }
+    },
+
+    heritage: {
+      options: {
+        parent: "package.json",
+        children: ["bower.json"]
+      }
     }
   });
 
@@ -95,6 +102,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-mocha');
   grunt.loadNpmTasks('grunt-simple-mocha');
+  grunt.loadNpmTasks('grunt-heritage');
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'nodeunit', 'concat', 'uglify']);
