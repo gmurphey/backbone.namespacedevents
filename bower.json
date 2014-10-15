@@ -15,16 +15,16 @@
     "**/.*",
     "node_modules",
     "test",
-    "tests"
+    "Gruntfile.js",
+    "package.json"
   ],
   "dependencies": {
-    "backbone": "~1.1.2",
-    "underscore": "~1.6.0"
+    "backbone": "~1.1.2"
   },
   "devDependencies": {
-    "mocha": "~1.18.2",
+    "mocha": "~1.21.5",
     "should": "~3.3.1",
-    "requirejs": "~2.1.11",
+    "requirejs": "~2.1.15",
     "sinon": "~1.10.0",
     "jquery": "~2.1.1"
   },
