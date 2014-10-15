@@ -24,7 +24,9 @@
   "devDependencies": {
     "mocha": "~1.18.2",
     "should": "~3.3.1",
-    "requirejs": "~2.1.11"
+    "requirejs": "~2.1.11",
+    "sinon": "~1.10.0",
+    "jquery": "~2.1.1"
   },
   "description": "A Backbone extension that triggers namespaced events globally."
 }

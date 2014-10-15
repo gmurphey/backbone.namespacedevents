@@ -8,6 +8,11 @@
     <div id="mocha"></div>
     <script type="text/javascript" src="vendor/mocha/mocha.js"></script>
     <script type="text/javascript" src="vendor/should/should.js"></script>
+    <script type="text/javascript" src="vendor/sinon/lib/sinon.js"></script>
+    <script type="text/javascript" src="vendor/sinon/lib/sinon/call.js"></script>
+    <script type="text/javascript" src="vendor/sinon/lib/sinon/behavior.js"></script>
+    <script type="text/javascript" src="vendor/sinon/lib/sinon/spy.js"></script>
+    <script type="text/javascript" src="vendor/sinon/lib/sinon/stub.js"></script>
     <script type="text/javascript" src="vendor/requirejs/require.js"></script>
     <script type="text/javascript">
       mocha.setup("bdd");
@@ -15,6 +20,7 @@
       require.config({
         paths: {
           "underscore": "vendor/underscore/underscore",
+          "jquery": "vendor/jquery/dist/jquery",
           "backbone": "vendor/backbone/backbone",
           "backbone.namespacedevents": "../backbone.namespacedevents"
         }
