@@ -1,4 +1,10 @@
-/* globals define: false, exports: true, require: false */
+/*! backbone.namespacedevents - v1.0.0 - 2014-10-16
+* Copyright (c) 2014 Garrett Murphey <gmurphey@gmurphey.com> (http://gmurphey.com); Licensed ISC */
+/*! backbone.namespacedevents - v1.0.0 - 2014-10-16
+* Copyright (c) 2014 Garrett Murphey <gmurphey@gmurphey.com> (http://gmurphey.com); Licensed ISC */
+/*! backbone.namespacedevents - v1.0.0 - 2014-10-16
+* Copyright (c) 2014 ; Licensed  */
+/* global define, exports, require */
 (function (root, factory) {
   if (typeof(define) === 'function' && define.amd) {
     define(['backbone', 'underscore'], function (Backbone, _) {
@@ -22,14 +28,14 @@
         var overridable_properties = ['eventNamespace'];
 
         _.extend(this, _.pick(options || {}, overridable_properties));
-
-        Backbone[module].prototype.initialize.apply(this, arguments);
       },
+
+      localTrigger: Backbone[module].prototype.trigger,
 
       trigger: function () {
         var args = arguments;
 
-        Backbone[module].prototype.trigger(this, args);
+        Backbone[module].prototype.localTrigger.apply(this, args);
 
         if (this.eventNamespace && args.length) {
           args[0] = [this.eventNamespace, args[0]].join(':');
@@ -41,7 +47,5 @@
     });
   });
 
-  _.extend(Backbone, {
-    NamespacedEvent: NamespacedEventModules
-  });
+  _.extend(Backbone, NamespacedEventModules);
 }));

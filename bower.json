@@ -1,6 +1,6 @@
 {
   "name": "backbone.namespacedevents",
-  "main": "backbone.namespacedevents.js",
+  "main": "dist/backbone.namespacedevents.js",
   "version": "1.0.0",
   "authors": [
     "Garrett Murphey <gmurphey@gmurphey.com> (http://gmurphey.com)"

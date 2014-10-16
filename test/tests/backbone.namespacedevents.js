@@ -17,16 +17,12 @@ var modules = ["Model", "Collection", "View"],
 Backbone.$ = sinon.stub().returns(jquery_methods);
 
 describe("Backbone", function () {
-  it("should expose the NamespacedEvent module", function () {
-    Backbone.should.have.property("NamespacedEvent");
-  });
-
-  describe("NamespacedEvent", function () {
+  describe("NamespacedEventModules", function () {
     for (var i = 0; i < modules.length; i++) {
       var module = modules[i];
 
       it ("should expose the " + module + " module", function () {
-        Backbone.NamespacedEvent.should.have.property(module);
+        Backbone.should.have.property(module);
       });
 
       describe(module, function () {
@@ -35,13 +31,13 @@ describe("Backbone", function () {
             var options = {
               eventNamespace: "namespace"
             },
-            test = new Backbone.NamespacedEvent[module](options);
+            test = new Backbone[module](options);
 
             test.eventNamespace.should.eql(options.eventNamespace);
           });
 
           it("should overwrite an existing eventNamespace property when an option is passed to the method", function () {
-            var TestObject = Backbone.NamespacedEvent[module].extend({
+            var TestObject = Backbone[module].extend({
               eventNamespace: "old-namespace"
             }),
             options = {
@@ -55,7 +51,7 @@ describe("Backbone", function () {
 
         describe("prototype.trigger", function () {
           it("should not fire a trigger on Backbone.Events when an eventNamespace property is not defined", function () {
-            var TestObject = Backbone.NamespacedEvent[module].extend(),
+            var TestObject = Backbone[module].extend(),
               test = new TestObject();
 
             sinon.stub(Backbone.Events, "trigger");
@@ -67,7 +63,7 @@ describe("Backbone", function () {
           });
 
           it("should fire a trigger on Backbone.Events when an eventNamespace property is defined", function (done) {
-            var TestObject = Backbone.NamespacedEvent[module].extend({
+            var TestObject = Backbone[module].extend({
               eventNamespace: "test-namespace"
             }),
             test = new TestObject();
