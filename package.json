@@ -1,6 +1,6 @@
 {
   "name": "backbone.namespacedevents",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Backbone extension that triggers local events globally.",
   "main": "backbone.namespacedevents.js",
   "author": "Garrett Murphey <gmurphey@gmurphey.com> (http://gmurphey.com)",

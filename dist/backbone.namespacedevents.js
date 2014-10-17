@@ -1,4 +1,4 @@
-/*! backbone.namespacedevents - v1.0.1 - 2014-10-16
+/*! backbone.namespacedevents - v1.0.2 - 2014-10-16
 * Copyright (c) 2014 Garrett Murphey <gmurphey@gmurphey.com> (http://gmurphey.com); Licensed ISC */
 /*! backbone.namespacedevents - v1.0.1 - 2014-10-16
 * Copyright (c) 2014 Garrett Murphey <gmurphey@gmurphey.com> (http://gmurphey.com); Licensed ISC */
