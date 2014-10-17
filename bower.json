@@ -28,5 +28,5 @@
     "sinon": "~1.10.0",
     "jquery": "~2.1.1"
   },
-  "description": "A Backbone extension that triggers namespaced events globally."
+  "description": "A Backbone extension that triggers local events globally."
 }

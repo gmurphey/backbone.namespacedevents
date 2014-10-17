@@ -105,7 +105,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-heritage');
 
   // Default task.
-  grunt.registerTask('default', ['test', 'concat', 'uglify']);
+  grunt.registerTask('default', ['test', 'heritage', 'concat', 'uglify']);
   grunt.registerTask('test', ['jshint', 'simplemocha', 'mocha']);
 
 };
